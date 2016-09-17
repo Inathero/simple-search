@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QProcess>
+#include <QStyle>
+#include <QDesktopWidget>
+#include "iqlineedit.h"
 
 namespace Ui {
 class MainWindow;
@@ -14,6 +18,10 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+private slots:
+    void on_lineEdit_returnPressed();
+    void on_lineEdit_escapePressed();
 
 private:
     Ui::MainWindow *ui;
